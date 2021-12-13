@@ -3,4 +3,5 @@ include 'simple-kafka-producer'
 include 'simple-kafka-consumer'
 include 'kafka-admin-client'
 include 'simple-kafka-streams'
+include 'simple-kafka-processor'
 
