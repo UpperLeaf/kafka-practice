@@ -28,3 +28,10 @@ project (':simple-kafka-producer') {
         implementation 'org.slf4j:slf4j-simple:1.7.30'
     }
 }
+
+project (':simple-kafka-consumer') {
+    dependencies {
+        implementation 'org.apache.kafka:kafka-clients:2.5.0'
+        implementation 'org.slf4j:slf4j-simple:1.7.30'
+    }
+}
