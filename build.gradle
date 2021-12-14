@@ -56,3 +56,14 @@ project (':simple-kafka-processor') {
         implementation 'org.slf4j:slf4j-simple:1.7.30'
     }
 }
+
+project (':simple-kafka-source-connector') {
+    dependencies {
+        implementation 'org.apache.kafka:connect-api:2.5.0'
+        implementation 'org.slf4j:slf4j-simple:1.7.30'
+    }
+
+    configurations {
+        implementation.canBeResolved(true)
+    }
+}

@@ -1,0 +1,8 @@
+jar {
+    from {
+        duplicatesStrategy = DuplicatesStrategy.WARN
+        configurations.implementation.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
