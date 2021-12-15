@@ -66,4 +66,33 @@ project (':simple-kafka-source-connector') {
     configurations {
         implementation.canBeResolved(true)
     }
+
+    jar {
+        from {
+            duplicatesStrategy = DuplicatesStrategy.WARN
+            configurations.implementation.collect {
+                it.isDirectory() ? it : zipTree(it)
+            }
+        }
+    }
+}
+
+project (':simple-kafka-sink-connector') {
+    dependencies {
+        implementation 'org.apache.kafka:connect-api:2.5.0'
+        implementation 'org.slf4j:slf4j-simple:1.7.30'
+    }
+
+    configurations {
+        implementation.canBeResolved(true)
+    }
+
+    jar {
+        from {
+            duplicatesStrategy = DuplicatesStrategy.WARN
+            configurations.implementation.collect {
+                it.isDirectory() ? it : zipTree(it)
+            }
+        }
+    }
 }
