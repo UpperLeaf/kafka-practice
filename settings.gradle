@@ -7,4 +7,5 @@ include 'simple-kafka-processor'
 include 'simple-kafka-source-connector'
 include 'simple-kafka-sink-connector'
 include 'consumer-multi-workerthread'
+include 'consumer-multithread-consumer'
 
